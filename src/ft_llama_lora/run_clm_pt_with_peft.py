@@ -62,11 +62,11 @@ from transformers.utils.versions import require_version
 
 from sklearn.metrics import accuracy_score
 
+from peft import LoraConfig, TaskType, get_peft_model, PeftModel, get_peft_model_state_dict
+
 import sys
 
 sys.path.append("./")
-
-from peft import LoraConfig, TaskType, get_peft_model, PeftModel, get_peft_model_state_dict
 
 os.environ["WANDB_MODE"] = "disabled"
 

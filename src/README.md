@@ -44,7 +44,7 @@ CUDA_VISIBLE_DEVICES="2,3" ./my_scripts/promptcblue_fft/run_train.sh
 
 ### 预测(生成回复)
 
-预测时，我们采用[vllm项目](https://github.com/vllm-project/vllm)对模型进行serving.同时这部分代码参照了[KnowLM项目](https://github.com/zjunlp/KnowLM/tree/main/inference)
+预测时，我们采用[vllm项目](https://github.com/vllm-project/vllm)对模型进行serving.同时这部分代码参照了[KnowLM项目](https://github.com/zjunlp/KnowLM/tree/main/inference)（目前仅支持vllm==0.1.2）
 
 在使用vllm时，我们首先要把训练得到的lora参数与LlaMA主干进行合并 (假设我们采用训练第800步的lora权重)：
 

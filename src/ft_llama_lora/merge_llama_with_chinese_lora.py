@@ -14,12 +14,12 @@ import torch
 
 import sys
 
-sys.path.append("./")
-
 import peft
 from peft import PeftModel
 from transformers import LlamaForCausalLM, LlamaTokenizer
 from huggingface_hub import hf_hub_download
+
+sys.path.append("./")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--base_model', default=None, required=True,
